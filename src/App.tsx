@@ -18,12 +18,11 @@ function App() {
     return (
         <Routes>
             <Route index element={<SplashScreen/>} path={"/"}/>
-
             <Route element={<Navigate to="/app/slides/offers"/>} path="/app"/>
 
             <Route path='app'>
-                <Route element={<StoresPage/>} path='/stores'/>
-                <Route element={<StorePage/>} path='/store/:id'/>
+                <Route element={<StoresPage/>} path='stores'/>
+                <Route element={<StorePage/>} path='store/:id'/>
                 <Route element={<SlidesPage/>} path={"slides"}>
                     <Route element={<OffersSlide/>} path={"offers"}/>
                     <Route element={<ProfileSlide/>} path={"profile"}/>
