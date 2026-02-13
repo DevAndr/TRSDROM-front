@@ -3,7 +3,7 @@ import {Tabs} from "@/components/ui/tabs.tsx";
 
 export const BottomTabsMenuStyled = styled(Tabs)`
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
 `;
 
 export const BottomTabsMenuTabStyled = styled.div`

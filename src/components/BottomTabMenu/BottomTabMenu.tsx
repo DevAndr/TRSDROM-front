@@ -5,13 +5,13 @@ import {
     BottomTabsMenuStyled,
     BottomTabsMenuTitleTabStyled
 } from "@/components/BottomTabMenu/styles/BottomTabsMenu.styled.ts";
-import {Store, User} from "lucide-react";
+import {ShoppingBag, Store, User} from "lucide-react";
 import {TabsList, TabsTrigger} from "@/components/ui/tabs.tsx";
 
 
 export type KeysTab =
     | "offers"
-    | "profile";
+    | "profile" | "my-store";
 
 export const BottomTabMenu = () => {
     const navigate = useNavigate();
@@ -39,8 +39,14 @@ export const BottomTabMenu = () => {
             <TabsList style={{height: 60, gap: 3}}>
                 <TabsTrigger value='offers'>
                     <BottomTabsMenuTitleTabStyled selected={selectedKey === "offers"}>
-                        <Store className="icon" size={16}/>
+                        <ShoppingBag className="icon" size={16}/>
                         <div className="title">Лента</div>
+                    </BottomTabsMenuTitleTabStyled>
+                </TabsTrigger>
+                <TabsTrigger value='my-store'>
+                    <BottomTabsMenuTitleTabStyled selected={selectedKey === "my-store"}>
+                        <Store className="icon" size={16}/>
+                        <div className="title">Мой магазин</div>
                     </BottomTabsMenuTitleTabStyled>
                 </TabsTrigger>
                 <TabsTrigger value='profile'>

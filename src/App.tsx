@@ -12,6 +12,9 @@ const OffersSlide = lazy(
 const ProfileSlide = lazy(
     () => import("./pages/slides/ProfileSlide/ProfileSlide.tsx"),
 );
+const MyStoreSlide = lazy(
+    () => import("./pages/slides/MyStore/MyStore.tsx"),
+);
 
 function App() {
 
@@ -26,6 +29,7 @@ function App() {
                 <Route element={<SlidesPage/>} path={"slides"}>
                     <Route element={<OffersSlide/>} path={"offers"}/>
                     <Route element={<ProfileSlide/>} path={"profile"}/>
+                    <Route element={<MyStoreSlide/>} path={"my-store"}/>
                 </Route>
             </Route>
         </Routes>
